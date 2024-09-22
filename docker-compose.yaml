@@ -2,7 +2,7 @@ version: '3'
 
 services:
   apache:
-    image: httpd:2.4
+    image: httpd:2.4.62
     volumes:
       - ./src:/var/www/html
       - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
@@ -10,7 +10,7 @@ services:
       - php
 
   nginx:
-    image: nginx:1.13
+    image: nginx:1.27.1
     ports:
       - 80:80
     volumes:
@@ -29,7 +29,7 @@ services:
       - mariadb
 
   mariadb:
-    image: mariadb:10.3
+    image: mariadb:11.6.1-ubi9-rc
     volumes:
       - ./mariadb:/var/lib/mysql
     environment:
