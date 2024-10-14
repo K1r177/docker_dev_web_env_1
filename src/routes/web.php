@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    //dump("Hello");
+    //dd("Hello");
+    //dump(config('app.locale'));
+    //dump(config('database.connections.mysql'));
+    //dump(config('app.env'));
+    dump(config('custom.custom_test'));
     return view('welcome');
 });
