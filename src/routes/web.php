@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    /* $cache = app()->make('cache');
+    $cache->put('test', 123);
+    dd($cache->get('test', 'default')); */
+    
+    /* $cache = app('cache');
+    dd($cache->get('test', 'default')); */
+
+    /* $cache = cache();
+    dd($cache->get('test')); */
+
+    //dd(Illuminate\Support\Facades\Cache::get('test', 222));
+
+    $cache = Illuminate\Support\Facades\App::make('cache');
+    dd($cache->get('test'));
+
     return view('welcome');
 });
